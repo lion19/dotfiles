@@ -52,6 +52,8 @@ nnoremap <leader>y :call ToggleNumbering()<cr><cr>
 
 " Leader-W to remove trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+" Leader-I to set foldmethod to indent
+nnoremap <leader>I :set foldmethod=indent<cr>
 
 " Q to execute the recorded macro
 nmap Q @q

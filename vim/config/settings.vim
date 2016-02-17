@@ -107,6 +107,7 @@ nnoremap tl :tabnext<CR>
 nnoremap th :tabprev<CR>
 nnoremap tn :tabnew<CR>
 syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+set foldlevel=2
 "setlocal foldmethod=syntax
 "setlocal foldlevel=99
 "set directory "~/tmp,/var/tmp,/tmp,~/temp"
@@ -126,3 +127,4 @@ let g:tagbar_type_coffee = {
 "airline config
 let g:airline_section_c ='%t'
 let NERDTreeHijackNetrw = 1
+
