@@ -1,3 +1,16 @@
+" Support for zoom
+if exists('g:loaded_zoom')
+  finish
+endif
+let g:loaded_zoom = 1
+
+nnoremap <silent> <Plug>(zoom-toggle) :call zoom#toggle()<CR>
+
+if !hasmapto('<Plug>(zoom-toggle)')
+  nmap <C-Z> <Plug>(zoom-toggle)
+endif
+"end support for zoom
+
 " Ignore F1
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
@@ -39,16 +52,16 @@ map <leader>df 0V$%<leader>d
 "nnoremap <leader>S ?{<cr>jV/^\s*\}?$<cr>k:sort<cr>:noh<cr>
 
 " Leader-y to toggle relative numbering
-function ToggleNumbering()
-  if (&number)
-    set nonumber
-    set relativenumber
-  else
-    set norelativenumber
-    set number
-  endif
-endfunction
-nnoremap <leader>y :call ToggleNumbering()<cr><cr>
+"function ToggleNumbering()
+  "if (&number)
+    "set nonumber
+    "set relativenumber
+  "else
+    "set norelativenumber
+    "set number
+  "endif
+"endfunction
+"nnoremap <leader>y :call ToggleNumbering()<cr><cr>
 
 " Leader-W to remove trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
@@ -81,3 +94,21 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+"format XML
+" one or more lines:
+vmap ,x !xmllint --dropdtd --format -<CR>
+
+" pretty-print current line
+nmap ,x !!xmllint --dropdtd --format -<CR>
+nmap <Tab> <C-n>
+inoremap <Tab> <C-n>
+nnoremap <Tab> <C-n>
+
+"rlue/vim-getting-things-down
+" Quick-switch between current file and `TODO.md` of project root
+nnoremap <Leader><Leader> :call getting_things_down#show_todo()<CR>
+
+" Cycle through TODO keywords
+nnoremap <silent> <Leader>n :call getting_things_down#cycle_status()<CR>
+nnoremap <C-3> :redraw!
