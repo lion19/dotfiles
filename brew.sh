@@ -45,6 +45,8 @@ brew install dark-mode
 #brew install exiv2
 brew install git
 brew install autojump
+brew install tree
+brew install tig
 
 # Remove outdated versions from the cellar.
 brew cleanup
