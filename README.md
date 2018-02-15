@@ -17,6 +17,17 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 chsh -s $(which zsh)
 ```
 
+#update .zshrc
+```bash
+# Choose a theme using ~/.oh-my-zsh/tools/theme_chooser.sh
+# my adjustments:
+ZSH_THEME="kphoen"
+plugins=(
+  git,
+  autojump
+)
+```
+
 #Add your .extras file to ~.  Mine looks like this:
 ```
 # Git credentials
