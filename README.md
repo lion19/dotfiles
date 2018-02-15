@@ -19,3 +19,15 @@ chsh -s $(which zsh)
 
 #TODO
 * store .zshrc in this dotfile repo (by first checking oh-my-zsh does not overwrite .zshrc on install)
+
+```
+# Git credentials
+# Not in the repository, to prevent people from accidentally committing under my name
+GIT_AUTHOR_NAME="tarik"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="tarik@occamzrazor.com"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+git config --global core.editor "mvim -f"
+```
