@@ -26,6 +26,8 @@ else
   if ! type "brew" > /dev/null; then
     echo "brew not detected, let us install now";
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "since we just installed brew, proceeding with brew dep install";
+    ./brew.sh
   fi
 fi;
 unset doIt;

@@ -44,6 +44,7 @@ brew install ack
 brew install dark-mode
 #brew install exiv2
 brew install git
+brew install autojump
 
 # Remove outdated versions from the cellar.
 brew cleanup
