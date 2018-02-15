@@ -47,6 +47,7 @@ brew install git
 brew install autojump
 brew install tree
 brew install tig
+brew install htop
 
 # Remove outdated versions from the cellar.
 brew cleanup
