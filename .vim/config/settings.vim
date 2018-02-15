@@ -229,4 +229,6 @@ function! HighlightRepeats() range
   endfor
 endfunction
 
+autocmd VimLeave * :!open -a Terminal
+
 command! -range=% HighlightRepeats <line1>,<line2>call HighlightRepeats()
