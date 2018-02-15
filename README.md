@@ -17,9 +17,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 chsh -s $(which zsh)
 ```
 
-#TODO
-* store .zshrc in this dotfile repo (by first checking oh-my-zsh does not overwrite .zshrc on install)
-
+#Add your .extras file to ~.  Mine looks like this:
 ```
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
@@ -31,3 +29,6 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 git config --global core.editor "mvim -f"
 ```
+
+#TODO
+* store .zshrc in this dotfile repo (by first checking oh-my-zsh does not overwrite .zshrc on install)
